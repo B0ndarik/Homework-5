@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><a href="index.html">На головну</a></h1>
+    <p>
+      Знайти суму всіх непарних чисел, що знаходяться між заданими користувачем
+      числами.
+    </p>
+    <script>
+      const intervalFrom = parseInt(
+        prompt("Enter the number beginning interval")
+      );
+      const intervalTo = parseInt(prompt("Enter the number ending interval"));
+
+      let oddSum;
+
+      if (intervalFrom % 2 != 0) oddSum = intervalFrom;
+      else oddSum = intervalFrom + 1;
+
+      for (let i = oddSum + 2; i <= intervalTo; i += 2) {
+        oddSum += i;
+      }
+
+      alert(oddSum);
+    </script>
+  </body>
+</html>

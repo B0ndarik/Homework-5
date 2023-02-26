@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><a href="index.html">На головну</a></h1>
+    <p>Вивести таблицю</p>
+    <script>
+      const numberOfRows = 3;
+      const numberOfColumns = 3;
+
+      let insertNumber = 1;
+
+      document.write(`<table border = 1.`);
+      for (let i = 0; i < numberOfColumns; i++) {
+        document.write(`<tr>`);
+        for (let j = 0; j < numberOfRows; j++) {
+          document.write(`<td>${insertNumber}</td>`);
+          insertNumber++;
+        }
+      }
+    </script>
+  </body>
+</html>

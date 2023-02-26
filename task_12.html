@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><a href="index.html">На головну</a></h1>
+    <p>
+      Ігровий автомат. Випадково вибираємо зображення у 3 позиціях. Вибір у
+      кожній позиції вибирається як одне з чотирьох зображень. Вивести ці
+      зображення і повідомити виграш користувача (три перших зображення 100 грн,
+      три других – 200, три третіх – 500, три четвертих зображення – 1000грн).
+      Використати цикли і switch (для вибору зображення за номером).
+    </p>
+
+    <script>
+      const minPosition = 1,
+        maxPosition = 4;
+
+      let randomImageNumber;
+      let randomImage;
+      let result = "";
+
+      alert("Slot machine");
+
+      for (let i = 0; i < 3; i++) {
+        randomImageNumber =
+          minPosition +
+          Math.floor(Math.random() * (maxPosition - minPosition + 1));
+        result += String(randomImageNumber);
+
+        switch (randomImageNumber) {
+          case 1:
+            document.write(`<img src="../img/apple.png">`);
+            break;
+          case 2:
+            document.write(`<img src="../img/banana.png">`);
+            break;
+          case 3:
+            document.write(`<img src="../img/grapes.png">`);
+            break;
+          case 4:
+            document.write(`<img src="../img/lemon.png">`);
+            break;
+        }
+      }
+      console.log(result);
+      let prize;
+      switch (result) {
+        case "111":
+          prize = "100grn";
+          break;
+        case "222":
+          prize = "200grn";
+          break;
+        case "333":
+          prize = "500grn";
+          break;
+        case "444":
+          prize = "1000grn";
+          break;
+        default:
+          prize = "Nothing";
+          break;
+      }
+      document.write(prize);
+    </script>
+  </body>
+</html>

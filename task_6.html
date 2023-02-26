@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><a href="index.html">На головну</a></h1>
+    <p>Вивести 3 таблиці (по 3 рядки і 3 стовпці у кожній) за зразком.</p>
+    <style>
+      .table {
+        display: inline-block;
+        margin-right: 20px;
+      }
+    </style>
+    <script>
+      const numberOfTables = 3;
+      const numberOfRows = 3;
+      const numberOfColumns = 3;
+
+      let insertNumber = 1;
+
+      for (let y = 0; y < numberOfTables; y++) {
+        document.write(`<div class = "table"><table border = 1>`);
+        for (let i = 0; i < numberOfColumns; i++) {
+          document.write(`<tr>`);
+          for (let j = 0; j < numberOfRows; j++) {
+            document.write(`<td>${insertNumber}</td>`);
+            insertNumber++;
+          }
+        }
+        document.write(`</table></div>`);
+      }
+    </script>
+  </body>
+</html>

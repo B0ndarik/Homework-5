@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><a href="index.html">На головну</a></h1>
+    <p>
+      Користувач поступово вводить прибуток магазину за кожен день протягом N
+      тижнів. Знайти загальну величину прибутку та вивести величину прибутку
+      протягом кожного окремого тижня.
+    </p>
+    <script>
+      let incomeInquiry = 1,
+        incomeSum = 0;
+
+      let weeklyIncome;
+
+      exit: for (let i = 1; incomeInquiry; i++) {
+        weeklyIncome = 0;
+        for (let j = 1; j <= 7; j++) {
+          incomeInquiry = parseFloat(prompt(`Enter income ${i} week ${j} day`));
+          if (!incomeInquiry) break exit;
+          else weeklyIncome += incomeInquiry;
+        }
+        document.write(`Income ${i} week = ${weeklyIncome}<br>`);
+        incomeSum += weeklyIncome;
+      }
+      document.write(`Total income = ${incomeSum}`);
+    </script>
+  </body>
+</html>

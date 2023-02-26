@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><a href="index.html">На головну</a></h1>
+    <p>
+      . Вивести з використанням циклів маркований список з випадковими числами
+      (1-100). Кількість випадкових чисел вводиться користувачем.
+    </p>
+    <script>
+      const numberOfRandom = parseInt(
+        prompt("Enter the amount of random numbers")
+      );
+      const minRandom = 1;
+      const maxRandom = 100;
+      let randomNumber;
+
+      for (let i = 0; i < numberOfRandom; i++) {
+        randomNumber =
+          minRandom + Math.floor(Math.random() * (maxRandom - minRandom + 1));
+        document.write(`<ul><li>${randomNumber}</li></ul>`);
+      }
+    </script>
+  </body>
+</html>
